@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: lightblue;
+  font-family: 'Kanit';
+}
+
+#main-layout {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template: "nav nav" 60px
+    "side content" / 90px
+}
+
+#navbar {
+  grid-area: nav;
+}
+
+@layer utilities {
+  .bg-navbar {
+    background-color: #134B8A;
+
+  }
+}
+
+#sidebar {
+  grid-area: side;
+}
+
+#content {
+  grid-area: content;
+}
+
+
+@layer base {
+  p {
+    /* @apply bg-red-200 text-green-500 */
+  }
+}
